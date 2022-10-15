@@ -1,0 +1,36 @@
+@model List<Domain.Dtos.GetQuotesDto> 
+<a class="btn btn-primary" href="/quote/Add" role="button">Create</a>
+ <div class= "container" style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
+@foreach (var quote in Model)
+{
+   
+    <div class="card" style="width: 25%; height: 35%;">
+
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">@quote.Author</h4>
+    <!-- Text -->
+    <p class="card-text">@quote.QuoteText</p>
+    <!-- Button -->
+     <td>
+                <a href="/quote/update/@quote.Id" class="btn btn-primary">Edit</a>
+                <a href="/quote/delete/@quote.Id" class="btn btn-primary">Delete</a> 
+            </td>
+
+  </div>
+
+</div>
+}
+</div>

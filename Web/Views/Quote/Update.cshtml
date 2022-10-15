@@ -1,0 +1,17 @@
+@model UpdateQuoteDto
+
+<form method="post" asp-action="Update">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id">
+        <label>Author</label>
+        <input asp-for="Author" type="text" class="form-control" placeholder="Enter quote Author">
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+  <div class="form-group">
+        <label>QuoteText</label>
+      <textarea asp-for="QuoteText" class="form-control"  placeholder="Enter QuoteText"></textarea>
+       <span asp-validation-for="QuoteText" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

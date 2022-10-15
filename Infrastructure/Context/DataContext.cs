@@ -12,7 +12,5 @@ public class DataContext:DbContext
         
     }
     
-    public DbSet<Department> Departments { get; set; }
-    public DbSet<Employee> Employees { get; set; }
-
+    public DbSet<Quote> Quotes { get; set; }
 }
